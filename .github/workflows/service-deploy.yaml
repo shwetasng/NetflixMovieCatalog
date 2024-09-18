@@ -1,13 +1,13 @@
-name: Netflix Movie Catalog Service Deployment
+name: Netflix Movie Catalog Service Deployment #title of the workflow
 
-on:
+on:           # define the event that triggers the workflow
   push:
     branches:
       - main
 
 env:
-  EC2_PUBLIC_IP: X.X.X.X  # TODO replace to your EC2 instance public IP
-  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # TODO define this secret in your GitHub repo settings
+  EC2_PUBLIC_IP: 13.60.75.54  # TODO replace to your EC2 instance public IP
+  SSH_PRIVATE_KEY: ${{ secrets.NETFLIX_AWS_PEM_FILE }}  # TODO define this secret in your GitHub repo settings
 
 jobs:
   Deploy:
